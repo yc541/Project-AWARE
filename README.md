@@ -46,7 +46,9 @@ Download the Mask R-CNN we trained on our dataset here:
 https://drive.google.com/file/d/17rC-bSpr2v3X9r2ymnSyW8DTk2gneS2V/view?usp=sharing
 
 Line 154 in TestAP.py 
+
     model.load_state_dict(torch.load('MRCNNRes50(COCO).pth', map_location=device))
+    
 loads the weights of our trained Mask R-CNN if it is in your local folder. You can modify the name of the file if your trained network weights are saved in other names.
 
 Here are some building edge detection results using our trained Mask R-CNN on residential properties:
