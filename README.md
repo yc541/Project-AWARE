@@ -41,6 +41,13 @@ if -W is N (default is Y), wisdm network availability checker api will not be ca
 
 if -W is Y, wisdm anetwork vailability checker api will be called for all 50 edge points, and in the folder there will be the original map and the avaiability images for APs, and also the individual latlon availability check results in json format. Use this option only if you have access to WISDM!!!
 
+Download the Mask R-CNN we trained on our dataset here:
+
+https://drive.google.com/file/d/17rC-bSpr2v3X9r2ymnSyW8DTk2gneS2V/view?usp=sharing
+
+Line 154 in TestAP.py 
+    model.load_state_dict(torch.load('MRCNNRes50(COCO).pth', map_location=device))
+loads the weights of our trained Mask R-CNN if it is in your local folder. You can modify the name of the file if your trained network weights are saved in other names.
 
 Here are some building edge detection results using our trained Mask R-CNN on residential properties:
 ![Fig7](https://user-images.githubusercontent.com/8125847/121217169-7be2ef00-c879-11eb-92e0-18356b8a4ab9.png)
