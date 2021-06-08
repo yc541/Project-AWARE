@@ -37,7 +37,7 @@ The main script to extract building edges and produce wireless coverage maps is 
 
 if -L (latlon) is given, the latitude and longitude will be used as the map center point directly without calling wisdm api to search the addresses. We recommand using this option if you do not have WISDM. If -L is given, the location from -L will override -P and -A.
 
-if -W is N (default is Y), wisdm network availability checker api will not be called, there will be a folder named with the center point latlon, inside the folder is a list of 50 edge point latlons in json format.We recommand using this option if you do not have WISDM. 
+if -W is N (default is Y), wisdm network availability checker api will not be called, there will be a folder named with the center point latlon, inside the folder is a list of 50 edge point latlons in json format. We recommand using this option if you do not have WISDM. 
 
 if -W is Y, wisdm anetwork vailability checker api will be called for all 50 edge points, and in the folder there will be the original map and the avaiability images for APs, and also the individual latlon availability check results in json format. Use this option only if you have access to WISDM!!!
 
