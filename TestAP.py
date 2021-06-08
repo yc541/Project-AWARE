@@ -194,12 +194,6 @@ imgx_rgb = Image.fromarray(imgx).convert('RGB')
 imgx = loader(imgx_rgb)
 edge = cannyEdgeDetector(imgx).detect()
 edge = edge[0]
-# axs[1, 0].set_title('image+edge')
-
-# find contours of edge image using open cv
-# edge = edge.astype(np.uint8)
-# contours, _ = cv2.findContours(edge, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-# img_contours = cv2.drawContours(np.array(img1), contours, -1, (0, 255, 0), 3)
 
 # find contours and generate polygon using skimage
 contours = find_contours(edge, 0, 'high')
@@ -216,12 +210,7 @@ result_polygon = Image.fromarray(result_polygon)
 result_polygon.save('mapsamples/edge.png','png')
 imgx_rgb.save('mapsamples/mask.png','png')
 result_polygon_gray = to_grayscale(result_polygon)
-# axs[1, 0].imshow(img1_grayscale.squeeze() + result_polygon_gray.squeeze()*3)
-# axs[1, 0].imshow(Image.blend(img1, result_polygon, 0.3))
 result_polygon_np = np.array(result_polygon_gray)
-# print(result_polygon[..., 2].max())
-# axs[1, 0].imshow(img1_grayscale.squeeze()*255+edge)
-# axs[1, 0].imshow(edge)
 edge_idx = np.where(result_polygon_np.squeeze() != 0)
 edge_t = list(zip(*edge_idx))  # 'transpose' the tuple
 edge_idx_random = random.sample(edge_t, 50)   # randomly pick some edge pixels
@@ -283,14 +272,4 @@ if not os.path.exists('./' + dirname):
     os.makedirs('./' + dirname)
 os.system('mv ' + './mapsamples/testmap* ' + dirname)
 os.system('mv ' + './mapsamples/Latlon* ' + dirname)
-
-# img_avi = Image.open('./mapsamples/testmap_avi.png')
-# plt.figure(figsize=(8, 8))
-# plt.imshow(img_avi)
-# print(device)
-# print("The properkty's score is ", avi_all.count(True) / len(avi_all))
-# print(edge_latlons)
-# plt.show()
-
-
 
