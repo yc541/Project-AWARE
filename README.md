@@ -48,4 +48,8 @@ Here are some building edge detection results using our trained Mask R-CNN on re
 Here are some examples of the coverage maps generated using the Mask R-CNN building detection and path profile results from WISDM:
 ![Fig8](https://user-images.githubusercontent.com/8125847/121217618-f01d9280-c879-11eb-8421-70dbd84dbf42.png)
 
+If you have access to wireless coverage planning tools other than WISDM, modify line 251 in TestAP.py
 
+    ap_names, avis, avi_comb = wisdm_checkavi(latlon)
+    
+to call your coverage planning tool API to check coverage for the building edge latlon points provided by Mask R-CNN.
