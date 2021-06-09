@@ -1,7 +1,7 @@
 # Project-AWARE
 Building edge extraction from aerial images using Mask R-CNN, to assist wireless network coverage planning tools to find potential CPE antenna mounting locations. The project uses WISDM (https://www.wirelesscoverage.com/) wireless coverage planning system to produce wireless coverage reports using the building edge locations extracted by Mask R-CNN. Any other wireless coverage planning tools which are capable of generating point-to-point path profiles should be compatible to this project. 
 
-The Mask R-CNN building edge detection part is built upon the torchvision object detection fine tuning tutorial, available at 
+The Mask R-CNN building edge detection part is built based on the torchvision object detection fine tuning tutorial for pedestrain detection, available at 
 https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html
 
 The project can run under the conda environment, with a few required packages:
@@ -10,7 +10,7 @@ The project can run under the conda environment, with a few required packages:
     
 Some other packages may need to be installed as well depending on the local environment, the import list in TestAP.py should have some hints on that.
 
-We have already trained a Mask R-CNN using an aerial image dataset (200 images) including rural and suburban residential properties in North Yorkshire, UK. The data set is available at: 
+We have already trained a Mask R-CNN using an aerial image dataset (200 images) including rural and suburban residential properties in North Yorkshire, UK. The dataset is available at: 
 
 https://drive.google.com/file/d/1KKwxUfkRL3GYmyULLFLof0SDHBf11W1C/view?usp=sharing
 
