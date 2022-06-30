@@ -62,3 +62,7 @@ If you have access to wireless coverage planning tools other than WISDM, modify 
     ap_names, avis, avi_comb = wisdm_checkavi(latlon)
     
 to call your coverage planning tool API to check coverage for the building edge latlon points provided by Mask R-CNN.
+
+Cite the article
+
+Chu, Yi, Hamed Ahmadi, David Grace, and David Burns. "Deep Learning Assisted Fixed Wireless Access Network Coverage Planning." IEEE Access 9 (2021): 124530-124540.
